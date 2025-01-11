@@ -4,22 +4,23 @@
 	"version": "1.0",
 	"description": "岗位实习周记批阅助手",
 	"author": "yaphone",
-	"icons":
-	{
-		"48": "icon.png",
-		"128": "icon.png"
-	},
-	"browser_action": 
-	{
-		"default_icon": "icon.png",
-		"default_popup": "popup.html"
-	},
 	"content_scripts": 
 	[
 		{
-			"matches": ["http://*/*", "https://*/*"],
+			"matches": ["https://dgsx.app.nbpt.edu.cn/*", "https://dgsx-app-443.webvpn.nbpt.edu.cn/*"],
 			"js": ["content-script.js"]
 		}
 	],
-	"web_accessible_resources": []
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": [],
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"content_security_policy": {
+    "script-src": "'self'",
+    "object-src": "'self'"
+  }
 }

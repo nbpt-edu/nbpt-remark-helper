@@ -4,8 +4,21 @@
 	<meta charset="utf-8"/>
 	<title>popup</title>
 </head>
-<body style="width:500px;min-height:100px;">
-	阅人无数--周记批阅小助手
+<body style="width:500px;min-height:150px;">
+	<!-- 阅人无数--周记批阅小助手 -->
+	<div style=" text-align: center;">
+		请输入提示词：
+		<br/>
+		<textarea id="promptText" style="width:500px;height:80px;" maxlength="200">我是一名职业院校的教师，目前正在指导学生进行岗位实习，要求学生每周完成一篇周记，然后我需要针对周记内容进行批阅，将批阅意见反馈给学生，以下是一篇学生的周记内容，请针对周记内容，给学生一个反馈，50字左右，不要出现套话。周记内容如下：</textarea>
+		<br/>
+		<button id="confirmButton" style="width: 100px;">确定</button>
+		<br/>
+	</div>
+	<div style="text-align: right;">
+		<span>阅人无数-周记批阅小助手</span>
+		<br/>
+		<span>powered by yaphone</span>
+	</div>
 	<script type="text/javascript" src="js/popup.js"></script>
 </body>
 </html>
