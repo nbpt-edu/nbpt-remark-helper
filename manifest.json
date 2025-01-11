@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "阅人无数",
+	"version": "1.0",
+	"description": "岗位实习周记批阅助手",
+	"author": "yaphone",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://www.baidu.com/*"],
+			"js": ["content-script.js"]
+		}
+	],
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	]
+}
