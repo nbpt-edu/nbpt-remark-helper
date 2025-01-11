@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "阅人无数",
 	"version": "1.0",
 	"description": "岗位实习周记批阅助手",
@@ -21,8 +21,5 @@
 			"js": ["content-script.js"]
 		}
 	],
-	"web_accessible_resources": 
-	[
-		"inject.js"
-	]
+	"web_accessible_resources": []
 }

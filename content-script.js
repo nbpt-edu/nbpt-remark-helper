@@ -2,13 +2,12 @@
 let iframeDocument = null
 
 
-function getRemark(params) {
-	fetch("https://hewuhelper.hewuqi.tech/gpt/remark-helper", {
-		method: "POST", // 请求方法
+function getRemark(text) {
+	fetch("https://hewuhelper.hewuqi.tech/gpt/remark-helper?content=" + text, {
+		method: "GET", // 请求方法
 		headers: {
 			"Content-Type": "application/json" // 设置请求头
-		},
-		body: JSON.stringify(params) // 请求体，转换为 JSON 字符串
+		}
 	})
 	.then(response => response.text())
 	.then(data => {
@@ -40,16 +39,9 @@ links.forEach(link => {
 				// 如果找到了该 td 元素
 				if (tdElement) {
 					// 获取该 td 元素中的文本内容
-					noteContent = tdElement.textContent.trim(); // 使用 textContent 获取文本并去除多余的空格
-					const params = {
-						msgs: [
-							{
-								"isMine": true,
-								"text": "我是一名职业院校的教师，目前正在指导学生进行岗位实习，要求学生每周完成一篇周记，然后我需要针对周记内容进行批阅，将批阅意见反馈给学生，以下是一篇学生的周记内容，请针对周记内容，给学生一个反馈，50字左右。周记内容如下：" + noteContent
-							}
-						]
-					}
-					getRemark(params)
+						noteContent = tdElement.textContent.trim(); // 使用 textContent 获取文本并去除多余的空格
+						const text = "我是一名职业院校的教师，目前正在指导学生进行岗位实习，要求学生每周完成一篇周记，然后我需要针对周记内容进行批阅，将批阅意见反馈给学生，以下是一篇学生的周记内容，请针对周记内容，给学生一个反馈，50字左右。周记内容如下：" + noteContent
+						getRemark(text)
 				} else {
 					console.log('未找到目标 td 元素');
 				}
