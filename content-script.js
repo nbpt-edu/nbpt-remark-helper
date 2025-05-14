@@ -51,7 +51,7 @@ const links = document.querySelectorAll('a')
 				const iframe = document.getElementById('layui-layer-iframe1')
 				if (iframe) {
 					iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-					const tdElement = iframeDocument.querySelectorAll('td[align="left"]')[1];
+					const tdElement = iframeDocument.querySelectorAll('td[align="left"]')[2];
 					// 如果找到了该 td 元素
 					if (tdElement) {
 						// 获取该 td 元素中的文本内容
