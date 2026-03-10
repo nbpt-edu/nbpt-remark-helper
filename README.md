@@ -32,7 +32,11 @@
 
 ![image7](./doc/imgs/7.png)
 
+7. 安装完成后，如您对生成结果不满意，可以在这里修改提示词
 
+![image8](./doc/imgs/8.png)
+
+![image9](./doc/imgs/9.png)
 
 ## 写在最后
 

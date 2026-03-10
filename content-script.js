@@ -8,7 +8,9 @@ function getRemark(text) {
 	const wordsCount = iframeDocument.getElementById('Journal_TCount')
 	const passRadio = iframeDocument.querySelectorAll('[type="radio"]')[0]
 	const bRadio = iframeDocument.querySelectorAll('[type="radio"]')[3]
-	let eventSource = new EventSource('https://xtd.nbhigh.cn/api/llm/remark-helper?content=' + encodeURIComponent(text))
+	// 为了防止 URL 过长导致请求失败，对内容进行截断（GET 请求 URL 长度有限制）
+	const safeText = text.length > 500 ? text.substring(0, 500) + '...' : text
+	let eventSource = new EventSource('https://xtd.nbhigh.cn/api/llm/remark-helper?content=' + encodeURIComponent(safeText))
 
 	// 默认设置为通过  级别为B
 	passRadio.checked = true
