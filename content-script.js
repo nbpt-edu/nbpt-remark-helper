@@ -8,7 +8,7 @@ function getRemark(text) {
 	const wordsCount = iframeDocument.getElementById('Journal_TCount')
 	const passRadio = iframeDocument.querySelectorAll('[type="radio"]')[0]
 	const bRadio = iframeDocument.querySelectorAll('[type="radio"]')[3]
-	let eventSource = new EventSource('https://hewuhelper.hewuqi.tech/gpt/remark-helper?content=' + encodeURIComponent(text))
+	let eventSource = new EventSource('https://xtd.nbhigh.cn/api/llm/remark-helper?content=' + encodeURIComponent(text))
 
 	// 默认设置为通过  级别为B
 	passRadio.checked = true
