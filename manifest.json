@@ -7,7 +7,7 @@
 	"content_scripts": 
 	[
 		{
-			"matches": ["https://dgsx.app.nbpt.edu.cn/*", "https://dgsx-app-443.webvpn.nbpt.edu.cn/*"],
+			"matches": ["https://dgsx.app.nbpu.edu.cn/*", "https://dgsx-app-443.webvpn.nbpu.edu.cn/*"],
 			"js": ["content-script.js"]
 		}
 	],
